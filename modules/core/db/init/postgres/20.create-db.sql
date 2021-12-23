@@ -1,0 +1,4 @@
+-- begin SQLCUBA_CHILD
+alter table SQLCUBA_CHILD add constraint FK_SQLCUBA_CHILD_ON_PARENT foreign key (PARENT_ID) references SQLCUBA_PARENT(ID) on delete CASCADE^
+create index IDX_SQLCUBA_CHILD_ON_PARENT on SQLCUBA_CHILD (PARENT_ID)^
+-- end SQLCUBA_CHILD

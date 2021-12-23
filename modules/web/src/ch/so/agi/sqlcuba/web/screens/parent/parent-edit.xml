@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://parentEdit.caption"
+        focusComponent="form"
+        messagesPack="ch.so.agi.sqlcuba.web.screens.parent">
+    <data>
+        <instance id="parentDc"
+                  class="ch.so.agi.sqlcuba.entity.Parent">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="parentDc">
+            <column width="350px">
+                <textField id="nameField" property="name"/>
+                <textField id="ageField" property="age"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-sqlcuba" insertBefore="administration" caption="mainMsg://menu_config.application-sqlcuba">
+        <item screen="sqlcuba_Parent.browse" caption="mainMsg://menu_config.sqlcuba_Parent.browse"/>
+        <item screen="sqlcuba_Child.browse" caption="mainMsg://menu_config.sqlcuba_Child.browse"/>
+    </menu>
+</menu-config>

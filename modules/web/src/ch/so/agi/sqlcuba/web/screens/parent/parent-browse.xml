@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://parentBrowse.caption"
+        focusComponent="parentsTable"
+        messagesPack="ch.so.agi.sqlcuba.web.screens.parent">
+    <data readOnly="true">
+        <collection id="parentsDc"
+                    class="ch.so.agi.sqlcuba.entity.Parent">
+            <view extends="_local"/>
+            <loader id="parentsDl">
+                <query>
+                    <![CDATA[select e from sqlcuba_Parent e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="parentsTable"
+            spacing="true">
+        <groupTable id="parentsTable"
+                    width="100%"
+                    dataContainer="parentsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="age"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="parentsTable.create"/>
+                <button id="editBtn" action="parentsTable.edit"/>
+                <button id="removeBtn" action="parentsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
