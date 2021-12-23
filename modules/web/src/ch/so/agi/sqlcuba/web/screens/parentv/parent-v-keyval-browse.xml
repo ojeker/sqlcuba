@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://parentVKeyvalBrowse.caption"
+        focusComponent="parentVsTable"
+        messagesPack="ch.so.agi.sqlcuba.web.screens.parentv">
+    <data readOnly="true">
+        <collection id="parentVsDc"
+                    class="ch.so.agi.sqlcuba.entity.ParentV">
+            <view extends="_local"/>
+            <loader id="parentVsDl">
+                <query>
+                    <![CDATA[select e from sqlcuba_ParentV e]]>
+                </query>
+            </loader>
+        </collection>
+        <keyValueCollection id="parentVsDc">
+            <loader id="parentVsDl">
+                <query>
+                    <![CDATA[select e.name, e.age, e.numChildren, e.sumAge from sqlcuba_ParentV e]]>
+                </query>
+            </loader>
+            <properties>
+                <property name="name" class="java.lang.String"/>
+                <property name="age" class="java.lang.Integer"/>
+                <property name="numChildren" class="java.lang.Integer"/>
+                <property name="sumAge" class="java.lang.Integer"/>
+            </properties>
+        </keyValueCollection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="parentVsTable"
+            spacing="true">
+        <groupTable id="parentVsTable"
+                    width="100%"
+                    dataContainer="parentVsDc">
+            <actions>
+                <action id="create" type="create">
+                    <properties>
+                        <property name="screenId" value="sqlcuba_Parent.edit" />
+                    </properties>
+                </action>
+                <action id="edit" type="edit">
+                    <properties>
+                        <property name="screenId" value="sqlcuba_Parent.edit" />
+                    </properties>
+                </action>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="age"/>
+                <column id="numChildren"/>
+                <column id="sumAge"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="parentVsTable.create"/>
+                <button id="editBtn" action="parentVsTable.edit"/>
+                <button id="removeBtn" action="parentVsTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

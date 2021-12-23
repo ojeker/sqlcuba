@@ -5,5 +5,6 @@
         <item screen="sqlcuba_Child.browse" caption="mainMsg://menu_config.sqlcuba_Child.browse"/>
         <item screen="sqlcuba_ParentExt.browse" caption="mainMsg://menu_config.sqlcuba_ParentExt.browse"/>
         <item screen="sqlcuba_ParentV.browse" caption="mainMsg://menu_config.sqlcuba_ParentV.browse"/>
+        <item screen="sqlcuba_ParentV.keyval-browse" caption="mainMsg://menu_config.sqlcuba_ParentV.keyval-browse"/>
     </menu>
 </menu-config>

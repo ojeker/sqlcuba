@@ -1,6 +1,5 @@
 package ch.so.agi.sqlcuba.entity;
 
-import com.haulmont.cuba.core.entity.BaseUuidEntity;
 import com.haulmont.cuba.core.global.DbView;
 
 import javax.persistence.Column;
@@ -11,16 +10,8 @@ import javax.validation.constraints.NotNull;
 @DbView
 @Table(name = "SQLCUBA_PARENT_V")
 @Entity(name = "sqlcuba_ParentV")
-public class ParentV extends BaseUuidEntity {
+public class ParentV extends ParentB {
     private static final long serialVersionUID = 4581563332573713050L;
-
-    @NotNull
-    @Column(name = "NAME", nullable = false)
-    private String name;
-
-    @NotNull
-    @Column(name = "AGE", nullable = false)
-    private Integer age;
 
     @NotNull
     @Column(name = "NUM_CHILDREN")
@@ -47,19 +38,4 @@ public class ParentV extends BaseUuidEntity {
         this.numChildren = numChildren;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
