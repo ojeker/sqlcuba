@@ -3,5 +3,7 @@
     <menu id="application-sqlcuba" insertBefore="administration" caption="mainMsg://menu_config.application-sqlcuba">
         <item screen="sqlcuba_Parent.browse" caption="mainMsg://menu_config.sqlcuba_Parent.browse"/>
         <item screen="sqlcuba_Child.browse" caption="mainMsg://menu_config.sqlcuba_Child.browse"/>
+        <item screen="sqlcuba_ParentExt.browse" caption="mainMsg://menu_config.sqlcuba_ParentExt.browse"/>
+        <item screen="sqlcuba_ParentV.browse" caption="mainMsg://menu_config.sqlcuba_ParentV.browse"/>
     </menu>
 </menu-config>

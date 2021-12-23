@@ -4,5 +4,6 @@
 
         <class>ch.so.agi.sqlcuba.entity.Parent</class>
         <class>ch.so.agi.sqlcuba.entity.Child</class>
+        <class>ch.so.agi.sqlcuba.entity.ParentV</class>
     </persistence-unit>
 </persistence>

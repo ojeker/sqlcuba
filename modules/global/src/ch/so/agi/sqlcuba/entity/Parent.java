@@ -38,3 +38,4 @@ public class Parent extends BaseUuidEntity {
         this.name = name;
     }
 }
+
