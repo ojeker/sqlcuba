@@ -5,15 +5,6 @@
         focusComponent="parentVsTable"
         messagesPack="ch.so.agi.sqlcuba.web.screens.parentv">
     <data readOnly="true">
-        <collection id="parentVsDc"
-                    class="ch.so.agi.sqlcuba.entity.ParentV">
-            <view extends="_local"/>
-            <loader id="parentVsDl">
-                <query>
-                    <![CDATA[select e from sqlcuba_ParentV e]]>
-                </query>
-            </loader>
-        </collection>
         <keyValueCollection id="parentVsDc">
             <loader id="parentVsDl">
                 <query>
